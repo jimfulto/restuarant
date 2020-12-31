@@ -1,9 +1,14 @@
-<app-header (featureSelected)="onNavigate($event)"></app-header>
+<!-- this also we dont need it gives error -->
+<!-- <app-header (featureSelected)="onNavigate($event)"></app-header> -->
+<app-header></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
-      <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
+      <!-- as routes are defined in app-routing module-we need just the router-outlet -->
+      <router-outlet></router-outlet>
+      <!-- these commented as we will use routing now -->
+      <!-- <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list> -->
     </div>
   </div>
 </div>
