@@ -7,8 +7,10 @@ import { Recipe } from '../../recipe.model';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
+  //hollow container
   @Input()
   recipe!: Recipe;
+  @Input() index: number;
 
   ngOnInit(): void {
   }
